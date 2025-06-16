@@ -1,4 +1,4 @@
-class Main {
+class nome {
     public static void main(String[] args) {
         System.out.println("Joao pedro");
     }

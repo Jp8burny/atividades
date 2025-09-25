@@ -1,0 +1,74 @@
+1°Atividade avaliativa
+Atividade 01 - Simulando um sistema escolar, crie um algoritmo
+em Java que receba do aluno as 8 notas anuais. O algoritmo deve
+calcular as médias bimestrais, as médias semestrais, e a média
+final.
+Ao final dos cálculos, o algoritmo deve apresentar os resultados de
+forma clara. Por Exemplo:
+Práticas
+1º Bimestre: 6.0
+2º Bimestre: 7.0
+1º Semestre: 6.5
+----------------------
+3º Bimestre: 8.0
+4º Bimestre: 9.0
+2º Semestre: 8.5
+-----------------------
+Média Final: 7.5
+
+Resposta:
+import java.util.Scanner;
+public class SistemaEscolar {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.println("Digite as notas do aluno:");
+// Notas do 1º semestre
+System.out.print("Nota do 1º bimestre: ");
+double nota1 = scanner.nextDouble();
+System.out.print("Nota do 2º bimestre: ");
+double nota2 = scanner.nextDouble();
+// Notas do 2º semestre
+System.out.print("Nota do 3º bimestre: ");
+double nota3 = scanner.nextDouble();
+System.out.print("Nota do 4º bimestre: ");
+double nota4 = scanner.nextDouble();
+// Notas do 3º semestre
+System.out.print("Nota do 5º bimestre: ");
+double nota5 = scanner.nextDouble();
+System.out.print("Nota do 6º bimestre: ");
+double nota6 = scanner.nextDouble();
+// Notas do 4º semestre
+System.out.print("Nota do 7º bimestre: ");
+double nota7 = scanner.nextDouble();
+System.out.print("Nota do 8º bimestre: ");
+double nota8 = scanner.nextDouble();
+// Cálculo das médias bimestrais e semestrais
+double media1Semestre = (nota1 + nota2) / 2;
+double media2Semestre = (nota3 + nota4) / 2;
+double media3Semestre = (nota5 + nota6) / 2;
+double media4Semestre = (nota7 + nota8) / 2;
+// Cálculo da média final
+double mediaFinal = (media1Semestre + media2Semestre + media3Semestre +
+media4Semestre) / 4;
+// Apresentação dos resultados
+System.out.println("\nResultados:");
+System.out.println("1º Semestre:");
+System.out.println(" 1º Bimestre: " + nota1);
+System.out.println(" 2º Bimestre: " + nota2);
+System.out.println(" Média: " + media1Semestre);
+System.out.println("\n2º Semestre:");
+System.out.println(" 3º Bimestre: " + nota3);
+System.out.println(" 4º Bimestre: " + nota4);
+System.out.println(" Média: " + media2Semestre);
+System.out.println("\n3º Semestre:");
+System.out.println(" 5º Bimestre: " + nota5);
+System.out.println(" 6º Bimestre: " + nota6);
+System.out.println(" Média: " + media3Semestre);
+System.out.println("\n4º Semestre:");
+System.out.println(" 7º Bimestre: " + nota7);
+System.out.println(" 8º Bimestre: " + nota8);
+System.out.println(" Média: " + media4Semestre);
+System.out.println("\nMédia Final: " + mediaFinal);
+scanner.close();
+  }
+}

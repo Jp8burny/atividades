@@ -1,0 +1,33 @@
+Atividade 02 - Desenvolva um algoritmo em Java que receba como entrada
+uma temperatura em graus Celsius (°C) digitada pelo usuário. O programa
+deverá realizar a conversão dessa temperatura para as escalas Fahrenheit
+(°F) e Kelvin (K), utilizando as seguintes fórmulas de conversão:
+Fahrenheit (°F) = (Celsius (°C) × 9/5) + 32
+Kelvin (K) = Celsius (°C) + 273.15
+Ao final dos cálculos, o algoritmo deve exibir na tela o valor da temperatura
+original em Celsius, juntamente com os valores convertidos em Fahrenheit e
+Kelvin, de forma clara e informativa. Por exemplo:
+Práticas
+Temperatura em Celsius: 25.0 °C
+Temperatura em Fahrenheit: 77.0 °F
+Temperatura em Kelvin: 298.15 K
+Resposta:
+import java.util.Scanner;
+public class ConversaoTemperatura {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.print("Digite a temperatura em Celsius (°C): ");
+double celsius = scanner.nextDouble();
+// Conversão para Fahrenheit
+double fahrenheit = (celsius * 9 / 5) + 32;
+// Conversão para Kelvin
+double kelvin = celsius + 273.15;
+// Exibição dos resultados
+System.out.println("\nResultados:");
+System.out.printf("Temperatura em Celsius: %.2f °C\n", celsius);
+System.out.printf("Temperatura em Fahrenheit: %.2f °F\n", fahrenheit);
+System.out.printf("Temperatura em Kelvin: %.2f K\n", kelvin);
+
+scanner.close();
+  }
+}
